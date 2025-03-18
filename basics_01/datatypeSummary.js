@@ -8,11 +8,11 @@ const  outsideTemp=null //typeof-object
 let userEmail;  //undefined
 const id = Symbol('123') //symbol
 const anotherId=Symbol('123') //symbol
-// console.log(id == anotherId)
-// console.log(id === anotherId);
+console.log(id == anotherId)
+console.log(id === anotherId);
 const bigNumber=23347347398543857984657834n;  //bigint
 
-// ********Reference type (non-primitive type)******
+// // ********Reference type (non-primitive type)******
 const heroes=["tortoise","pikachu" ,"penguin"] //object
 let myobj = {  //object
     name:"bhumica",
@@ -25,6 +25,24 @@ const myFunction = function(){ //function
 }
 
 console.log(typeof(userEmail))
+
+//****stack and heap */
+let myYoutubeName = "GoOn"
+let anotherName = myYoutubeName
+anotherName= "goGreen"
+console.log(anotherName)
+console.log(myYoutubeName)
+let userone={
+    email:"user1@ybl",
+    upi: "user@ybl" 
+
+}
+
+let usertwo= userone
+usertwo.email= "bhumica@google.com"
+console.log(usertwo.email)
+console.log(userone.email)
+
 
 
 

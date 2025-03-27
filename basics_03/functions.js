@@ -38,7 +38,7 @@ function loginUserMessage(username = "sam"){
 // console.log(loginUserMessage("hitesh"))
 // console.log(loginUserMessage("hitesh"))
 
-
+//*********video-20**********
 function calculateCartPrice(val1, val2, ...num1){
     return num1
 }
@@ -54,12 +54,13 @@ function handleObject(anyobject){
     console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
 }
 
-// handleObject(user)
-handleObject({
+// handleObject(user)  //also a way to pass
+handleObject({         //also a way to pass the arguments
     username: "sam",
     price: 399
 })
 
+//on arrays
 const myNewArray = [200, 400, 100, 600]
 
 function returnSecondValue(getArray){

@@ -28,4 +28,4 @@ const shopCart = [
 ]
 
 const total = shopCart.reduce((acc,item)=> acc + item.price,0)
-console.log(total)
+console.log(total) 

@@ -46,3 +46,67 @@
 
 </script>
 </html>
+<!-- my practicedCode -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code | DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    //how to make a function
+    function addlang(langName){
+        const li=document.createElement('li');
+        li.innerHTML=`${langName}`;
+        document.querySelector('.language').appendChild(li);//in the document add the child li in the language class
+        
+    }
+    addlang("C++");
+    addlang("python");
+    addlang("R");
+    addlang("Typescript");
+
+    //this one is the most optimised way of making a function
+    function addOptiLang(langName){
+        const li=document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li);//in the document add the child li in the language class
+            }
+            addOptiLang("RUBY");
+    
+    //how editing works 1st way
+    const second=document.querySelector("li:nth-child(2)"); //selecting the child
+    console.log(second); //gives C++
+    // second.innerHTML="C"; //will change to C
+    //2nd way of editing 
+    const newlist=document.createElement('li');
+    newlist.textContent="RUST";
+    // second.replaceChild(newlist); // this will not work
+    second.replaceWith(newlist);
+            //same as first , just to show how outer html works
+    const first=document.querySelector("li:first-child")
+            first.outerHTML='<li>Golang</li>' //changes to golang
+
+            //removing 
+            const liElement=document.querySelector("li:nth-child(3)")
+            console.log(liElement); //gives python
+             liElement.remove();  //removes python
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

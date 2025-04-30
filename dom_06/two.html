@@ -37,3 +37,54 @@
     console.log("NODES: ", parent.childNodes);
 </script>
 </html>
+
+<!-- my practiced code -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <!-- this is a comment -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent=document.querySelector('.parent')
+    // console.log(parent);
+    // console.log(parent.children);
+    // console.log(parent.children[1].innerHTML);
+    for(let i=0;i<parent.children.length;i++){
+        // console.log(parent.children[i].textContent)
+    }
+  parent.children[1].style.color="red"; //worked cuz parent is a element 
+  parent.children[0].style.color="pink";
+  parent.children[2].style.color="purple"
+  parent.children[3].style.color="green"
+
+//   console.log(parent.firstElementChild);
+//   console.log(parent.lastElementChild);
+//   console.log(parent.secondElementChild); not defoined like this
+
+const day=document.querySelector('.day');
+// console.log(day); //it selects first one only thats why prinying only monday
+// console.log(day.parentElement);
+// console.log(day.nextElementSibling);
+
+console.log("NODES: ",parent.children); //it will select all the childrens
+
+
+
+
+
+
+</script>
+
+</html>

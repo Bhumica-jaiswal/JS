@@ -6,17 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Chai aur Javascript</h1>
-    <button id="start">Start</button>
-    <button id="stop">Stop</button>
+    <h1> JIMMY and TOTOOO</h1>
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
+
 </body>
 <script>
-    const sayDate = function(str){
-        console.log(str, Date.now());
+   const saydate= function(str){
+        console.log(str,Date.now())
     }
+    let intervaldId;
+    // clearInterval(intervaldId);
 
-    const intervalId = setInterval(sayDate, 1000, "hi")
+    //start
+    document.querySelector('#start').addEventListener('click', function(){
+        intervaldId=setInterval(saydate,1000,"toto my FRIEND");
 
-    clearInterval(intervalId)
+    })
+    //stop
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(intervaldId);
+    })
 </script>
 </html>
